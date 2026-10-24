@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Статистика розходів</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="default_card_name">**** 1234</string>
+    <string name="default_sum_name">0.00 ₴</string>
+    <string name="notification_permission_title">Дозвіл на перехват сповіщень:</string>
+    <string name="permission_granted">Надано</string>
+    <string name="permission_not_granted">Не надано</string>
+    <string name="grant_permission">Надати дозвіл</string>
+    <string name="app_name_hint">Ім\'я додатка (напр. Google Wallet)</string>
+    <string name="test_interception_title">Тестування перехвату</string>
+    <string name="notification_text_hint">Вміст сповіщення</string>
+    <string name="notification_title_hint">Назва сповіщення</string>
+    <string name="send_test">Відправити тест</string>
+    <string name="test_processed">Тестове повідомлення оброблено</string>
+    <string name="settings_label">Налаштування</string>
+    <string name="choose_photo_label">Вибрати фото</string>
+    <string name="save_card_label">Зберегти картку</string>
+    <string name="card_form_label">Останні 4 цифри картки</string>
+    <string name="remove_card_label">Видалити картку</string>
+    <string name="test_title_sample">ATB</string>
+    <string name="test_text_sample">399,99 грн - Visa PrivatBank **3108</string>
+    <string name="debug_notifications_title">Налагодження сповіщень</string>
+    <string name="record_notifications_label">Записувати перехоплені повідомлення</string>
+    <string name="clear_list_label">Очистити список</string>
+</resources>

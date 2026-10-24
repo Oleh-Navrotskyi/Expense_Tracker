@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "748966269195",
+    "project_id": "statisticapp-f2179",
+    "storage_bucket": "statisticapp-f2179.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748966269195:android:c76c2c6b86e1a7d868120e",
+        "android_client_info": {
+          "package_name": "com.oleje.transactions_statistic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748966269195-v1nq8pth4c4a6usj6lsu5g5c5b2krura.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oleje.transactions_statistic",
+            "certificate_hash": "96aef8dea1f01bb1b0759cd8d3db9af69fd93ff4"
+          }
+        },
+        {
+          "client_id": "748966269195-batjpjar15h76o8fpqibc70ikd98km80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrY_p-uruEzPIr1K89UEO-S_F2mL9NcBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748966269195-batjpjar15h76o8fpqibc70ikd98km80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

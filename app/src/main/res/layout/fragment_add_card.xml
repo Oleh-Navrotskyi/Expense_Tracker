@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragments.AddCardFragment"
+    android:background="@color/background">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cardNumInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/surfaceVariant"
+        android:textColorHint="@color/onSurfaceVariant"
+        android:hint="@string/card_form_label"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cardNumEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/onSurfaceVariant"
+            android:inputType="number"
+            android:maxLength="4" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/cardImagePreview"
+        android:layout_width="350dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#EEEEEE"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_gallery"
+
+        app:layout_constraintTop_toBottomOf="@id/cardNumInputLayout" />
+
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/choose_photo_label"
+        android:backgroundTint="@color/surfaceVariant"
+        android:textColor="@color/onSurfaceVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardImagePreview" />
+
+    <Button
+        android:id="@+id/saveCardButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/surfaceVariant"
+        android:textColor="@color/onSurfaceVariant"
+        android:text="@string/save_card_label"
+        app:layout_constraintTop_toBottomOf="@id/selectImageButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

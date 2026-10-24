@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".fragments.SettingsFragment">
+
+        <TextView
+            android:id="@+id/permissionStatusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_permission_title"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/permissionStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/permission_not_granted"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/permissionStatusTitle"
+            app:layout_constraintStart_toEndOf="@id/permissionStatusTitle"
+            app:layout_constraintTop_toTopOf="@id/permissionStatusTitle" />
+
+        <Button
+            android:id="@+id/grantPermissionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/grant_permission"
+            android:backgroundTint="@color/surfaceVariant"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/permissionStatusTitle" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/appNameInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/app_name_hint"
+            app:layout_constraintTop_toBottomOf="@id/grantPermissionButton">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/appNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Google Wallet" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/appNameInputLayout" />
+
+        <TextView
+            android:id="@+id/testTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_interception_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/testTitleInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/notification_title_hint"
+            app:layout_constraintTop_toBottomOf="@id/testTitle">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/testContentEditTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/test_title_sample" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/testTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/notification_text_hint"
+            app:layout_constraintTop_toBottomOf="@+id/testTitleInputLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/testContentEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/test_text_sample" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/sendTestButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/send_test"
+            android:backgroundTint="@color/surfaceVariant"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintTop_toBottomOf="@+id/testTextInputLayout" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/sendTestButton" />
+
+        <TextView
+            android:id="@+id/authTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Хмарна синхронізація"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <TextView
+            android:id="@+id/userEmailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Не увійшли в акаунт"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/authTitle" />
+
+        <Button
+            android:id="@+id/googleSignInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Увійти через Google"
+            android:backgroundTint="@color/surfaceVariant"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userEmailText" />
+
+        <Button
+            android:id="@+id/syncButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Синхронізувати"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/googleSignInButton"
+            app:layout_constraintTop_toBottomOf="@id/userEmailText" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/googleSignInButton" />
+
+        <TextView
+            android:id="@+id/debugTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Налагодження сповіщень"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/recordNotificationsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Записувати перехоплені повідомлення"
+            app:layout_constraintTop_toBottomOf="@id/debugTitle" />
+
+        <Button
+            android:id="@+id/clearInterceptedButton"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Очистити список"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recordNotificationsSwitch" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/interceptedRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/clearInterceptedButton"
+            tools:listitem="@layout/item_intercepted_notification" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

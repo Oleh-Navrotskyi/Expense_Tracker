@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/surfaceVariant">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/notifPackageName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="com.example.app"
+            android:textSize="12sp"
+            android:textColor="@color/primary" />
+
+        <TextView
+            android:id="@+id/notifTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/notifText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification text content..."
+            android:textSize="14sp"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/notifDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12:00 01.01.2024"
+            android:textSize="10sp"
+            android:layout_marginTop="4dp"
+            android:gravity="end" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
